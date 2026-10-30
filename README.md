@@ -18,8 +18,5 @@ Static site (no build step). Upload the contents of this folder to Hostinger (pu
 - `weddingDate` — `2026-11-19T16:00:00+05:30`
 - `ceremonyMapUrl` — the supplied Google Maps share link (set to `''` to hide the button)
 
-## Before publishing: make the share preview reliable
-No production URL was supplied, so `og:url`/`canonical` are omitted and `og:image` is a relative path.
-Once you have a domain, in `index.html` change both
-`content="assets/og-image.jpg"` (og:image and twitter:image) to `content="https://YOUR-DOMAIN/assets/og-image.jpg"`
-and add `<meta property="og:url" content="https://YOUR-DOMAIN/">`. WhatsApp caches previews, so test with a fresh link.
+## Share preview
+og:url, canonical and the absolute og:image/twitter:image all point to https://thouseef-asna.vercel.app/. WhatsApp caches previews, so test with a fresh link (or add ?v=2).
